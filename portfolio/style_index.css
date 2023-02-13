@@ -1,0 +1,92 @@
+
+/* 텍스트 처리 */
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    display:inline-block;
+    margin: 15px;
+}
+
+h2 {
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #d5dbd5;
+    border-radius: 7px;
+}
+
+h3 {
+    margin-top: 5px;
+    border: 2px solid #d5dbd5;
+    padding: 5px;
+    word-break: keep-all;
+    border-radius: 7px;
+}
+
+h4 {
+    text-align: center;
+    margin: 0px;
+}
+
+/* body를 둘로 나누는 topbar, container */
+body {
+    background-color: #f0f6f0;
+}
+
+.topbar {
+    display: block;
+    text-align: center;
+    border-bottom: 3px solid #d5dbd5;
+}
+
+.container {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+/* 버튼 설정 */
+button {
+    border: 3px solid #d5dbd5;
+    margin: 10px;
+    border-radius: 5%;
+    padding: 10px;
+    background-color: #e9efe9;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.02)
+}
+
+/* 블로그 버튼 링크 설정 */
+
+.blogbutton {
+    display: inline-block;
+    margin: 0px;
+    padding: 1px;
+
+}
+
+.blogicon {
+    display: inline-block;
+}
+
+
+/* container 내 컨텐츠 설정 */
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+
+
+
