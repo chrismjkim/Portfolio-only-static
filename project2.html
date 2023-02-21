@@ -3,17 +3,60 @@
     <head>
     <meta charset="UTF-8">
     <title>소팅 알고리즘 비교분석</title>
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="project2.css">
+    <script src="project2.js"></script>
     </head>
     
-    <body>
+    <body>  
       <div class="topbar">
         <a href="index.html">
           <h1>김민준 포트폴리오</h1>
         </a>
       </div>
     
-    
-    
+      <div class="container">
+        <div class="row">
+          <div class="sorter">
+            <div class ="sorterlist">
+              <button class ="sortertype" onclick="activateSorterButton(this); activateSorter(Sort.Bubble(array));" style = "background-color: #ffffff; border-bottom: #ffffff;">
+                Bubble Sort
+              </button>
+              <button class="sortertype" onclick="activateSorterButton(this); activateSorter(Sort.Selection(array));">
+                Selection Sort
+              </button>
+              <button class="sortertype" onclick="activateSorterButton(this); activateSorter(Sort.Insertion(array));">
+                Insertion Sort
+              </button>
+              <button class="sortertype" onclick="activateSorterButton(this);">
+                Quick Sort
+              </button>
+              <button class="sortertype" onclick="activateSorterButton(this);">
+                Merge Sort  
+              </button>
+          </div>
+          <div class="bezel">
+            <div id="screen"></div>
+          </div>
+        </div>
+        <div class="controller">
+          <div class="arraysizer">
+            <button class="controlbutton" type="button" onclick="ArrayNumber.remove(array); renewDisplay();">
+              자료 1개 제거
+            </button>
+            <button class="controlbutton" type="button" onclick="ArrayNumber.add(array); renewDisplay();">
+              자료 1개 추가
+            </button>
+            <button class="controlbutton" type="button" onclick="ArrayNumber.shuffle(array); renewDisplay();">
+              다시 섞기
+            </button>
+            <button class="controlbutton" type="button" onclick="startSort();">
+              정렬 시작
+            </button>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
     </body>
 </html>

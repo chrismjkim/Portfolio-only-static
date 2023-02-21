@@ -89,7 +89,6 @@ button:hover {
 .row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-self: center;
 }
 
 img {
