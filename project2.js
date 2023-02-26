@@ -26,6 +26,7 @@ var ArrayNumber = {
 }
 
 var Sort = {
+  // 버블 정렬
   Bubble: async function (array) {
     var i, j, temp;
     for (i = 0; i < length; i++) {
@@ -40,7 +41,8 @@ var Sort = {
       }
     }
   },
-  Selection: function (array) {
+  // 선택 정렬
+  Selection: async function (array) {
     var i, j, x, target;
     for (i = 0; i < length; i++) {
       target = array[i];
@@ -52,20 +54,26 @@ var Sort = {
       x = array.indexOf(target);
       array[x] = array[i];
       array[i] = target;
+      
+      await sleep(100);
+      renewDisplay();
     }
   },
-  Insertion: function (array) {
+  // 삽입 정렬
+  Insertion: async function (array) {
     var i, j, temp;
     for (i = 1; i < length + 1; i++) {
       for (j = i - 1; j > 0; j--) {
-        if (array[j] > array[j-1]) {
+        if (array[j] >= array[j-1]) {
           break;
         }
         else {
           temp = array[j];
           array[j] = array[j - 1];
-          array[j - 1] = [temp];
+          array[j - 1] = temp;
         }
+        await sleep(100);
+        renewDisplay();
       }
     }
   }
@@ -82,8 +90,8 @@ function  activateSorterButton(sortertype) {
     }
   sortertype.style.backgroundColor = "#ffffff";
   sortertype.style.borderBottom = "#ffffff";
-  }
-
+}
+  
 
 
 // 그래프 생성
@@ -123,17 +131,34 @@ var maxElement = Math.max.apply(null, array);
 window.onload = function () { 
   setDisplay();
 }
+var currentSorter = Sort.Bubble(array);
 
+// 동기지연 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-async function animateSort() {
-  await sleep(100);
+// 버튼 온클릭 설정
+function button_numberRemove() {
+  ArrayNumber.remove(array);
   renewDisplay();
 }
 
-function startSort() {
-  Sort.Bubble(array);
+function button_numberAdd() {
+  ArrayNumber.add(array);
+  renewDisplay();
+}
+
+function button_shuffle() {
+  ArrayNumber.shuffle(array);
+  renewDisplay();
+}
+
+function button_startSort() {
+  currentSorter();
+}
+
+function activateSorter(sorter) {
+  currentSorter() = sorter;
 }
 
