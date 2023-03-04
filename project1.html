@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>소팅 알고리즘 비교분석</title>
+    <link rel="stylesheet" href="project1.css">
+    <script src="project1.js"></script>
+    </head>
+    
+    <body>  
+      <div class="topbar">
+        <a href="index.html">
+          <h1>김민준 포트폴리오</h1>
+        </a>
+      </div>
+    
+      <div class="container">
+        <div class="row">
+          <div class="sorter">
+            <div class ="sorterlist">
+              <button class ="sortertype" onclick="activateSorterButton(this); current=1;" style = "background-color: #ffffff; border-bottom: #ffffff;">
+                Bubble Sort
+              </button>
+              <button class="sortertype" onclick="activateSorterButton(this); current=2;">
+                Selection Sort
+              </button>
+              <button class="sortertype" onclick="activateSorterButton(this); current=3;">
+                Insertion Sort
+              </button>
+              <button class="sortertype" onclick="activateSorterButton(this);">
+                Quick Sort
+              </button>
+              <button class="sortertype" onclick="activateSorterButton(this);">
+                Merge Sort  
+              </button>
+          </div>
+          <div class="bezel">
+            <div id="screen"></div>
+          </div>
+        </div>
+        <div class="controller">
+          <div class="arraysizer">
+            <button class="controlbutton" type="button" onclick="button_numberRemove();">
+              자료 1개 제거
+            </button>
+            <button class="controlbutton" type="button" onclick="button_numberAdd();">
+              자료 1개 추가
+            </button>
+            <button class="controlbutton" type="button" onclick="button_shuffle();">
+              다시 섞기
+            </button>
+            <button class="controlbutton" type="button" onclick="button_startSort();">
+              정렬 시작
+            </button>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    </body>
+</html>
